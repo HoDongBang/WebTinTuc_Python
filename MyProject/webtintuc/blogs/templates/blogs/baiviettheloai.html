@@ -1,0 +1,25 @@
+{% extends 'blogs/chinh.html' %}
+
+{% block contentmenu %}
+    {% if danhsachmenu %}
+        {% for item in danhsachmenu %}
+            <li><a href="/theloai/{{ item.id }}">{{ item.tentheloai }}</a></li>
+        {% endfor %}
+    {% endif %}
+
+{% endblock %}
+
+{% block contentbaiviet %}
+    {% if qs %}
+        {% for item in qs.baiviet_set.all %}
+            <a href="/baiviet/{{ item.id }}" class="baiviet">
+            <p>
+                <img src="../media/{{ item.hinh }}">
+                <div class="tieude"><h2>{{ item.tenbaiviet }}</h2>
+                    <div class="thoigian">{{ item.ngay|date:"d-m-Y" }}</div>
+                </div>
+            </p>
+            </a>
+        {% endfor %}
+    {% endif %}
+{% endblock %}

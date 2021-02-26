@@ -1,0 +1,36 @@
+{% extends 'blogs/chinh.html' %}
+
+{% block contentmenu %}
+    {% if danhsachmenu %}
+        {% for item in danhsachmenu %}
+            <li><a href="/theloai/{{ item.id }}">{{ item.tentheloai }}</a></li>
+        {% endfor %}
+    {% endif %}
+
+{% endblock %}
+
+{% block contentbaiviet %}
+<div class="lienhe">
+    <div class="row">
+        <div class="map col-md-6" >
+            <a href="https://www.google.com/maps/place/25+Qu%E1%BA%A3n+Tr%E1%BB%8Dng+Ho%C3%A0ng,+Xu%C3%A2n+Kh%C3%A1nh,+Ninh+
+            Ki%E1%BB%81u,+C%E1%BA%A7n+Th%C6%A1,+Vi%E1%BB%87t+Nam/@10.0231701,105.7662745,17z/data=!3m1!4b1!4m5!3m4!1s0x31a088
+            3a90f778c5:0x908daaecc0634c85!8m2!3d10.0231648!4d105.7684632?hl=vi-VN">Địa chỉ</a><br>
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3928.9235194958283!2d105.76627451483293!3d1
+        0.023170075384911!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x31a0883a90f778c5%3A0x908daaecc0634c85!2zMjUgUX
+        XhuqNuIFRy4buNbmcgSG_DoG5nLCBYdcOibiBLaMOhbmgsIE5pbmggS2nhu4F1LCBD4bqnbiBUaMahLCBWaeG7h3QgTmFt!5e0!3m2!1svi!2s!4v160
+        8376868177!5m2!1svi!2s" width="500" height="350" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false"
+                     tabindex="0"></iframe>s
+        </div>
+
+        <div class="fb col-md-6">
+            <div>Fanpage</div><br>
+            <iframe src="https://www.facebook.com/plugins/page.php?href=https%3A%2F%2Fwww.facebook.com%2FT%25C3%25B4i-c%25C5%25A9ng-k-nh%25E1%25BB%259B-n%25E1%25BB%25AFa-ch%25E1%25BB%2589-bi%25E1%25BA%25BFt-n%25C6%25A1i-%25C4%2591%25C3%25B3-t%25C3%25B4i-t%25E1%25BB%25ABng-h%25E1%25BB%258Dc-chung-v%25E1%25BB%259Bi-1-c%25C3%25B4-g%25C3%25A1i-402295123738961&tabs=timeline&width=500&height=350&small_header=false&adapt_container_width=true&hide_cover=false&show_facepile=true&appId=363173934753494" width="500" height="350" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowfullscreen="true" allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"></iframe>
+        </div>
+    </div>
+    <div class="tt">
+        <p>SĐT: 0396320503</p>
+        <p>Email: hotienthinh.210698@gmail.com</p>
+    </div>
+</div>
+{% endblock %}

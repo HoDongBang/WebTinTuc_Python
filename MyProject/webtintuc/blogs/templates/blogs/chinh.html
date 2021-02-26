@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    {% load staticfiles %}
+    <meta charset="UTF-8">
+    <link rel="shortcut icon" href="{% static 'icon.png' %}">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'css/bootstrap.min.css' %}" type="text/css">
+    <title>Báo cũ</title>
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+        body {
+            background-image: url("{% static 'background.jpg' %}");
+            background-attachment: fixed;
+            background-size: cover;
+        }
+        .contai {
+            width: 1100px;
+            margin: 0 auto 0 auto;
+            background-color: white;
+        }
+        .header {
+            width: 1100px;
+        }
+        .header img{
+            margin: 0;
+            padding: 0;
+            width: 1100px;
+        }
+        .menu{
+            margin-top: -16px;
+            width: 1100px;
+            height: 80px;
+            background-color: #202020;
+        }
+        .menu li{
+            float: left;
+            list-style: none;
+        }
+        .menu a{
+            display: block;
+            height: 80px;
+            font-size: 22px;
+            line-height: 80px;
+            padding: 0 10px;
+            margin-right: 10px;
+            color: white;
+            font-weight: bold;
+            text-decoration: none;
+            transition:0.2s ease-in-out;
+        }
+        .menu a:hover{
+            color: red;
+            transition:0.2s ease-in-out;
+        }
+
+
+        .than{
+        }
+
+
+        .baiviet{
+            width: 1000px;
+            height: 150px;
+            display: inline-block;
+            background-color: #F0F0F0;
+            margin: 10px 50px;
+            color: black;
+        }
+        .baiviet:hover{
+            background-color: #DCDCDC;
+            transition:0.2s ease-in-out;
+        }
+        .baiviet img,.tiende{
+            float:left;
+        }
+        .baiviet img{
+            margin: 10px 10px;
+            width: 125px;
+            height: 130px;
+            object-fit: cover;
+            border: 1px solid black;
+        }
+        a:hover{
+            text-decoration: none;
+        }
+
+        .lienhe{
+            margin: 50px 0 50px 20px;
+            font-size: 18px;
+            color: black;
+            font-weight: bold;
+        }
+        .lienhe iframe{
+            margin: 0;
+            padding: 0;
+        }
+        .map a,.fb div{
+            margin-top: 0;
+        }
+        .map iframe{
+            margin-top: 28px;
+        }
+        .tt{
+            margin: 50px 0;
+            padding-bottom: 50px;
+        }
+
+        .baivietcuthe{
+            margin: 50px 20px 50px 20px;
+            font-size: 18px;
+        }
+        .baivietcuthe h2{
+            margin-bottom: 50px;
+            color: red;
+        }
+        .baivietcuthe img{
+            float: left;
+        }
+        .baivietcuthe .thoigian{
+            clear: both;
+            padding-bottom: 50px;
+            color: #4169E1;
+            font-weight: bold;
+        }
+        .baivietcuthe img{
+            border: 1px solid black;
+            margin: 0 20px 20px 0;
+        }
+        .baivietcuthe .noidung{
+            text-indent: 50px;
+            margin-bottom: 20px;
+            text-align: justify;
+        }
+    </style>
+</head>
+<body>
+    <div class="contai">
+        <div class="header">
+            <img src="{% static 'banner.jpg' %}">
+            <div class="menu">
+                <ul>
+                    <li><a href="/">TRANG CHỦ</a></li>
+                    {% block contentmenu %}
+
+                    {% endblock %}
+                    <li><a href="/lienhe/">LIÊN HỆ</a></li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="than">
+            {% block contentbaiviet %}
+
+            {% endblock %}
+        </div>
+    </div>
+</body>
+</html>
